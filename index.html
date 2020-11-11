@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<head>
+    <title>Click the red block</title>
+    <style>
+        table td{
+            /* border: 0.2mm double black; */
+            font-weight: bold;
+            padding-top: 5px;
+            min-width: 50px;
+            max-width: 50px;
+        }
+        button{
+            vertical-align: top;
+            border-style: none;
+            height:45px;
+            width: 45px;
+        }
+        button:nth-child(even){
+            background-color: grey;
+        }
+
+        #board{
+            margin: auto;
+            /* margin: auto 12px; */
+            border: double;
+            height: 360px;
+            width : 360px;
+        }
+    </style>
+</head>
+<body>
+    
+    <h3 style="text-align:center;padding: 0mm;">[Click the <span style="color: red;">RED</span> blocks]</h3>
+    <div id="board">
+        <button id="8a" style="height:45px;width: 45px;">
+        </button><button id="8b">
+        </button><button id="8c">
+        </button><button id="8d">
+        </button><button id="8e">
+        </button><button id="8f">
+        </button><button id="8g">
+        </button><button id="8h">
+        </button><br>
+        <button id="7a" style="height:45px;width: 45px;">
+        </button><button id="7b">
+        </button><button id="7c">
+        </button><button id="7d">
+        </button><button id="7e">
+        </button><button id="7f">
+        </button><button id="7g">
+        </button><button id="7h">
+        </button><br>
+        <button id="6a" style="height:45px;width: 45px;">
+        </button><button id="6b">
+        </button><button id="6c">
+        </button><button id="6d">
+        </button><button id="6e">
+        </button><button id="6f">
+        </button><button id="6g">
+        </button><button id="6h">
+        </button><br>
+        <button id="5a" style="height:45px;width: 45px;">
+        </button><button id="5b">
+        </button><button id="5c">
+        </button><button id="5d">
+        </button><button id="5e">
+        </button><button id="5f">
+        </button><button id="5g">
+        </button><button id="5h">
+        </button><br>
+        <button id="4a" style="height:45px;width: 45px;">
+        </button><button id="4b">
+        </button><button id="4c">
+        </button><button id="4d">
+        </button><button id="4e">
+        </button><button id="4f">
+        </button><button id="4g">
+        </button><button id="4h">
+        </button><br>
+        <button id="3a" style="height:45px;width: 45px;">
+        </button><button id="3b">
+        </button><button id="3c">
+        </button><button id="3d">
+        </button><button id="3e">
+        </button><button id="3f">
+        </button><button id="3g">
+        </button><button id="3h">
+        </button><br>
+        <button id="2a" style="height:45px;width: 45px;">
+        </button><button id="2b">
+        </button><button id="2c">
+        </button><button id="2d">
+        </button><button id="2e">
+        </button><button id="2f">
+        </button><button id="2g">
+        </button><button id="2h">
+        </button><br>
+        <button id="1a" style="height:45px;width: 45px;">
+        </button><button id="1b">
+        </button><button id="1c">
+        </button><button id="1d">
+        </button><button id="1e">
+        </button><button id="1f">
+        </button><button id="1g">
+        </button><button id="1h">
+        </button><br>
+    
+        <table align="left">
+            <tr>
+                <td style="text-align: right;">Score:</td>
+                <td style="text-align: left;">0000</td>
+                <td style="text-align: right;">Lives:</td>
+                <td style="text-align: left;">0</td>
+                <td style="text-align: right;color: red;"></td>
+            </tr>
+        </table>
+    </div>
+    <script>
+
+        //variables
+        var selector=0; //0,1,2
+        var board=[
+            ["8a","8b","8c","8d","8e","8f","8g","8h"],
+            ["7a","7b","7c","7d","7e","7f","7g","7h"],
+            ["6a","6b","6c","6d","6e","6f","6g","6h"],
+            ["5a","5b","5c","5d","5e","5f","5g","5h"],
+            ["4a","4b","4c","4d","4e","4f","4g","4h"],
+            ["3a","3b","3c","3d","3e","3f","3g","3h"],
+            ["2a","2b","2c","2d","2e","2f","2g","2h"],
+            ["1a","1b","1c","1d","1e","1f","1g","1h"],
+        ];
+
+        var Wrong="Wrong!!!";
+        //gamerule
+        var elements = document.getElementsByTagName('button');
+        for (var i = 0, len = elements.length; i < len; i++) {
+            elements[i].addEventListener("click", function() {
+                    console.log(event.target.id)
+                } 
+            );
+        } 
+            
+    </script>
+</body>
+</html>
+
+<!-- innerHTML -->
+<!-- replace text with a picture later -->
+<!-- show moves as well -->
